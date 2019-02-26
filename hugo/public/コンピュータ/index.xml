@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>コンピュータs on My New Hugo Site</title>
-    <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/</link>
+    <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/</link>
     <description>Recent content in コンピュータs on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20180614_packagemangement/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20180614_packagemangement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20180614_packagemangement/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20180614_packagemangement/</guid>
       <description>記録 20180614 PackageManagementというものを知った。今まで何故知らなかったのか、Windows標準のパッケージマネージャである。 しかし。。。ホームページを見ながらインストール手順をこなしても、何故かインストールされない。 Install-Packageして、質問にYで答えて、なんかダウンロードした仕草を見せるけど、なぜかアプリが導入されていない。 以下はFireFoxでの例。
 PS C:\WINDOWS\system32&amp;gt; install-package firefox パッケージは、信頼済みとマークされていないパッケージ ソースから取得されています。 &#39;chocolatey&#39; からソフトウェアをアンインストールしますか? [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S) [?] ヘルプ (既定値は &amp;quot;N&amp;quot;): Y Name Version Source Summary ---- ------- ------ ------- Firefox 60.0.2 chocolatey Bringing together all kinds of awesomeness to make ...  ちなみに、chocolateyコマンドでFirefoxをインストールしようとすると、できる。もうなぞです。
 PS C:\WINDOWS\system32&amp;gt; choco install firefox Chocolatey v0.10.11 Installing the following packages: firefox By installing you accept licenses for the packages.</description>
@@ -23,20 +23,20 @@ PS C:\WINDOWS\system32&amp;gt; choco install firefox Chocolatey v0.10.11 Install
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181203_haxe4.0/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181203_haxe4.0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181203_haxe4.0/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181203_haxe4.0/</guid>
       <description>Haxe 4.0 ￼
  Haxe 4.0.0-preview.5  Release Notes New features: Removals: Bugfixes: Standard Library:  Haxe 4.0.0-preview.4  Release Notes New features: General improvements and optimizations: Removals: Bugfixes: Standard Library:  axe 4.0.0-preview.3  Release Notes New features: General improvements and optimizations: Removals: Deprecations: Bugfixes:   Haxe 4.0.0-preview.5 Release Notes Dear Community, On behalf of the Haxe Foundation, we are proud to announce the official release of the Haxe 4.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181213_nosql%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181213_nosql%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181213_nosql%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181213_nosql%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/</guid>
       <description> NoSQLデータベース 内容 Rocks DB 良さげ。
 記録 20181213 ページ作成。
 20181205 日記より。
@@ -47,19 +47,19 @@ PS C:\WINDOWS\system32&amp;gt; choco install firefox Chocolatey v0.10.11 Install
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190120_pdf%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190120_pdf%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190120_pdf%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190120_pdf%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</guid>
       <description>記録 20190120 ページ作成 qpdf,cpdf,pdftkなどについて調べたいなーと思い。</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190129_migemo/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190129_migemo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190129_migemo/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190129_migemo/</guid>
       <description>20190129 Windows用バイナリ https://www.kaoriya.net/software/cmigemo/ Python用 https://github.com/mooz/python-cmigemo あらかじめcmigemoを用意する必要がある。
 製作者 http://0xcc.net/unimag/2/ OCaml実装 https://qiita.com/derui/items/5cbfad7deb9cafa20c7b
 どちらにせよ、プログラムから使うにはcmigemoのインストールが必要そうなので面倒くさくていいやー。</description>
@@ -67,10 +67,10 @@ PS C:\WINDOWS\system32&amp;gt; choco install firefox Chocolatey v0.10.11 Install
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190129_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E8%A8%AD%E7%BD%AE%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190129_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E8%A8%AD%E7%BD%AE%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190129_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E8%A8%AD%E7%BD%AE%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190129_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E8%A8%AD%E7%BD%AE%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
       <description>20190129 Disqus https://ja.wikipedia.org/wiki/Disqus https://diwao.com/2017/06/install-disqus.html
 Netlify Pushしたらサイトとして公開してくれるサービス？ フォームも用意されているらしい。
 NetlifyのForm Handlingで静的サイトに簡単にお問い合わせフォームを作る https://blog.mismithportfolio.com/web/netlify-form-handling
@@ -80,10 +80,10 @@ NetlifyのForm Handlingで静的サイトに簡単にお問い合わせフォー
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190210_%E7%A4%BE%E5%86%85%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%84%E3%83%BC%E3%83%AB/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190210_%E7%A4%BE%E5%86%85%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%84%E3%83%BC%E3%83%AB/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190210_%E7%A4%BE%E5%86%85%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%84%E3%83%BC%E3%83%AB/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190210_%E7%A4%BE%E5%86%85%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%84%E3%83%BC%E3%83%AB/</guid>
       <description>20190223 もうExcel管理は嫌だ！小さなチームを軽量OSSで回そう（DevHub+TaskQuest） https://qiita.com/hashrock/items/6575609e4bb66f756df2 1. DevHub（チャット・通知・情報共有） 1. TaskQuest（タスク管理） 1. Gitlab（中央レポジトリ・Issue管理）
 脱Excel！ossを組み合わせた構成管理自動化 https://www.slideshare.net/dongkayakuda/exceloss 1. cloudstack(クラウド基盤構築管理) 1. OCS Inventory NG(IT資産管理ソフトウェア) 1. OTRS(チケット管理システム)
 20190210 Scrapbox、esa、kibelaあたりのドキュメンテーションツールを検討比較したのでまとめとく https://blog.unresolved.xyz/documentation-tools-for-organization/
@@ -93,10 +93,10 @@ NetlifyのForm Handlingで静的サイトに簡単にお問い合わせフォー
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190219_%E7%84%A1%E6%96%99nosql%E3%82%B5%E3%83%BC%E3%83%90/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190219_%E7%84%A1%E6%96%99nosql%E3%82%B5%E3%83%BC%E3%83%90/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190219_%E7%84%A1%E6%96%99nosql%E3%82%B5%E3%83%BC%E3%83%90/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190219_%E7%84%A1%E6%96%99nosql%E3%82%B5%E3%83%BC%E3%83%90/</guid>
       <description>記録 20190223 MongoDB Atlas 使ってみた。512MBはちょっと小さいけど、まあいい感じじゃないですかね。
 20190219 Pocket整理 MongoDBもサーバレスプラットフォーム提供開始、「MongoDB Stitch」正式リリース https://www.publickey1.jp/blog/18/mongodbmongodb_stitch.html →無料じゃなかった。
 herokuに作る無料Node-Redサーバ（MongoDBも付いてくるよ） https://qiita.com/juicy/items/b4c97f75418d189f45a7
@@ -109,20 +109,20 @@ herokuに作る無料Node-Redサーバ（MongoDBも付いてくるよ） https:/
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190220_%E7%84%A1%E6%96%99%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B5%E3%83%BC%E3%83%90/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190220_%E7%84%A1%E6%96%99%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B5%E3%83%BC%E3%83%90/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190220_%E7%84%A1%E6%96%99%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B5%E3%83%BC%E3%83%90/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190220_%E7%84%A1%E6%96%99%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B5%E3%83%BC%E3%83%90/</guid>
       <description>20190224 HTTPS 2 https://kunst1080.hatenablog.com/entry/2017/04/16/160224 https://qiita.com/kuboon/items/f424b84c718619460c6f ここ参照して、とりあえずできた。 全部Dockerで完結させるが吉。 STAGEのコメントアウトを外すと、ちゃんとした証明書を取得してくれて、 Chromeとかで接続したときに、よく見る「保護されていません」のエラーが出なくなる。 これで完成ではなかろうか。
 version: &#39;3&#39; services: app: build: context: . dockerfile: ./Dockerfile ports: - 3000 # localhost only by default links: - mongo:mongo - elasticsearch:elasticsearch depends_on: - mongo - elasticsearch environment: - MONGO_URI=mongodb://mongo:27017/growi - ELASTICSEARCH_URI=http://elasticsearch:9200/growi - PASSWORD_SEED=changeme # - FILE_UPLOAD=local # activate this line if you use local storage of server rather than AWS # - MATHJAX=1 # activate this line if you want to use MathJax # - PLANTUML_URI=http:// # activate this line and specify if you use your own PlantUML server rather than public plantuml.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190224_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/20190224_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</link>
+      <link>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190224_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/20190224_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190224_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/20190224_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</guid>
+      <guid>http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190224_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/20190224_%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</guid>
       <description>20190226 HUGOを試してみようかと。 https://gohugo.io/getting-started/quick-start/
 インストール 公式サイトだとMac前提です。 Windowsだとchocolateyがあるといいですね。 chocolatey前提で、powershellで作業していきます。
 chocoっとインストール。

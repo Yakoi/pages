@@ -1,8 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "http://pages.yakoi.info/hugo/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "ananke"
-baseurl = "http://pages.yakoi.info/hugo/"
 canonifyurls = true
 
 

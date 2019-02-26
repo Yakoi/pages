@@ -17,7 +17,7 @@
 
     
     
-      <link href="http://example.org/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+      <link href="http://pages.yakoi.info/hugo/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
     
 
     
@@ -32,7 +32,7 @@
 <meta property="og:description" content="20190224 HTTPS 2 https://kunst1080.hatenablog.com/entry/2017/04/16/160224 https://qiita.com/kuboon/items/f424b84c718619460c6f ここ参照して、とりあえずできた。 全部Dockerで完結させるが吉。 STAGEのコメントアウトを外すと、ちゃんとした証明書を取得してくれて、 Chromeとかで接続したときに、よく見る「保護されていません」のエラーが出なくなる。 これで完成ではなかろうか。
 version: &#39;3&#39; services: app: build: context: . dockerfile: ./Dockerfile ports: - 3000 # localhost only by default links: - mongo:mongo - elasticsearch:elasticsearch depends_on: - mongo - elasticsearch environment: - MONGO_URI=mongodb://mongo:27017/growi - ELASTICSEARCH_URI=http://elasticsearch:9200/growi - PASSWORD_SEED=changeme # - FILE_UPLOAD=local # activate this line if you use local storage of server rather than AWS # - MATHJAX=1 # activate this line if you want to use MathJax # - PLANTUML_URI=http:// # activate this line and specify if you use your own PlantUML server rather than public plantuml." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190220_%E7%84%A1%E6%96%99%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B5%E3%83%BC%E3%83%90/" />
+<meta property="og:url" content="http://pages.yakoi.info/hugo/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190220_%E7%84%A1%E6%96%99%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B5%E3%83%BC%E3%83%90/" />
 
 
 <meta itemprop="name" content="">
@@ -63,7 +63,7 @@ version: &#39;3&#39; services: app: build: context: . dockerfile: ./Dockerfile p
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+    <a href="http://pages.yakoi.info/hugo/" class="f3 fw2 hover-white no-underline white-90 dib">
       My New Hugo Site
     </a>
     <div class="flex-l items-center">
@@ -970,7 +970,7 @@ volumes:
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://pages.yakoi.info/hugo/" >
     &copy; 2019 My New Hugo Site
   </a>
     <div>
@@ -988,7 +988,7 @@ volumes:
 
     
 
-  <script src="http://example.org/dist/js/app.3fc0f988d21662902933.js"></script>
+  <script src="http://pages.yakoi.info/hugo/dist/js/app.3fc0f988d21662902933.js"></script>
 
 
   </body>
