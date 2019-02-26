@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="http://example.org/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="記録 20180614 PackageManagementというものを知った。今まで何故知らなかったのか、Windows標準のパッケージマネージャである。 しかし。。。ホームページを見ながらインストール手順をこなしても、何故かインストールされない。 Install-Packageして、質問にYで答えて、なんかダウンロードした仕草を見せるけど、なぜかアプリが導入されていない。 以下はFireFoxでの例。
+PS C:\WINDOWS\system32&gt; install-package firefox パッケージは、信頼済みとマークされていないパッケージ ソースから取得されています。 &#39;chocolatey&#39; からソフトウェアをアンインストールしますか? [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S) [?] ヘルプ (既定値は &quot;N&quot;): Y Name Version Source Summary ---- ------- ------ ------- Firefox 60.0.2 chocolatey Bringing together all kinds of awesomeness to make ...  ちなみに、chocolateyコマンドでFirefoxをインストールしようとすると、できる。もうなぞです。
+PS C:\WINDOWS\system32&gt; choco install firefox Chocolatey v0.10.11 Installing the following packages: firefox By installing you accept licenses for the packages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20180614_packagemangement/" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="記録 20180614 PackageManagementというものを知った。今まで何故知らなかったのか、Windows標準のパッケージマネージャである。 しかし。。。ホームページを見ながらインストール手順をこなしても、何故かインストールされない。 Install-Packageして、質問にYで答えて、なんかダウンロードした仕草を見せるけど、なぜかアプリが導入されていない。 以下はFireFoxでの例。
+PS C:\WINDOWS\system32&gt; install-package firefox パッケージは、信頼済みとマークされていないパッケージ ソースから取得されています。 &#39;chocolatey&#39; からソフトウェアをアンインストールしますか? [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S) [?] ヘルプ (既定値は &quot;N&quot;): Y Name Version Source Summary ---- ------- ------ ------- Firefox 60.0.2 chocolatey Bringing together all kinds of awesomeness to make ...  ちなみに、chocolateyコマンドでFirefoxをインストールしようとすると、できる。もうなぞです。
+PS C:\WINDOWS\system32&gt; choco install firefox Chocolatey v0.10.11 Installing the following packages: firefox By installing you accept licenses for the packages.">
+
+
+
+<meta itemprop="wordCount" content="186">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="記録 20180614 PackageManagementというものを知った。今まで何故知らなかったのか、Windows標準のパッケージマネージャである。 しかし。。。ホームページを見ながらインストール手順をこなしても、何故かインストールされない。 Install-Packageして、質問にYで答えて、なんかダウンロードした仕草を見せるけど、なぜかアプリが導入されていない。 以下はFireFoxでの例。
+PS C:\WINDOWS\system32&gt; install-package firefox パッケージは、信頼済みとマークされていないパッケージ ソースから取得されています。 &#39;chocolatey&#39; からソフトウェアをアンインストールしますか? [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S) [?] ヘルプ (既定値は &quot;N&quot;): Y Name Version Source Summary ---- ------- ------ ------- Firefox 60.0.2 chocolatey Bringing together all kinds of awesomeness to make ...  ちなみに、chocolateyコマンドでFirefoxをインストールしようとすると、できる。もうなぞです。
+PS C:\WINDOWS\system32&gt; choco install firefox Chocolatey v0.10.11 Installing the following packages: firefox By installing you accept licenses for the packages."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        コンピュータS
+      </p>
+      <h1 class="f1 athelas mb1"></h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="0001-01-01T00:00:00Z">January 1, 0001</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="記録">記録</h2>
+
+<h3 id="20180614">20180614</h3>
+
+<p>PackageManagementというものを知った。今まで何故知らなかったのか、Windows標準のパッケージマネージャである。
+しかし。。。ホームページを見ながらインストール手順をこなしても、何故かインストールされない。
+Install-Packageして、質問にYで答えて、なんかダウンロードした仕草を見せるけど、なぜかアプリが導入されていない。
+以下はFireFoxでの例。</p>
+
+<pre><code>PS C:\WINDOWS\system32&gt; install-package firefox
+
+パッケージは、信頼済みとマークされていないパッケージ ソースから取得されています。
+'chocolatey' からソフトウェアをアンインストールしますか?
+[Y] はい(Y)  [A] すべて続行(A)  [N] いいえ(N)  [L] すべて無視(L)  [S] 中断(S)  [?] ヘルプ (既定値は &quot;N&quot;): Y
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+Firefox                        60.0.2           chocolatey       Bringing together all kinds of awesomeness to make ...
+</code></pre>
+
+<p>ちなみに、chocolateyコマンドでFirefoxをインストールしようとすると、できる。もうなぞです。</p>
+
+<pre><code>PS C:\WINDOWS\system32&gt; choco install firefox
+Chocolatey v0.10.11
+Installing the following packages:
+firefox
+By installing you accept licenses for the packages.
+
+Firefox v60.0.2 [Approved]
+firefox package files install completed. Performing other installation steps.
+The package Firefox wants to run 'chocolateyInstall.ps1'.
+Note: If you don't run this script, the installation will fail.
+Note: To confirm automatically next time, use '-y' or consider:
+choco feature enable -n allowGlobalConfirmation
+Do you want to run the script?([Y]es/[N]o/[P]rint): y
+
+Downloading Firefox 64 bit
+  from 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/60.0.2/win64/ja/Firefox%20Setup%2060.0.2.exe'
+Progress: 100% - Completed download of C:\Users\Shimpei\AppData\Local\Temp\chocolatey\Firefox\60.0.2\Firefox Setup 60.0.2.exe (37.22 MB).
+Download of Firefox Setup 60.0.2.exe (37.22 MB) completed.
+Hashes match.
+Installing Firefox...
+Firefox has been installed.
+  firefox may be able to be automatically uninstalled.
+ The install of firefox was successful.
+  Software installed to 'C:\Program Files\Mozilla Firefox'
+
+Chocolatey installed 1/1 packages.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+</code></pre>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2019 My New Hugo Site
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="http://example.org/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

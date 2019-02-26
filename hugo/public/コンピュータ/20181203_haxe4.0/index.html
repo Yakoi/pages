@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="http://example.org/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="Haxe 4.0 ￼
+ Haxe 4.0.0-preview.5  Release Notes New features: Removals: Bugfixes: Standard Library:  Haxe 4.0.0-preview.4  Release Notes New features: General improvements and optimizations: Removals: Bugfixes: Standard Library:  axe 4.0.0-preview.3  Release Notes New features: General improvements and optimizations: Removals: Deprecations: Bugfixes:   Haxe 4.0.0-preview.5 Release Notes Dear Community, On behalf of the Haxe Foundation, we are proud to announce the official release of the Haxe 4." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20181203_haxe4.0/" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Haxe 4.0 ￼
+ Haxe 4.0.0-preview.5  Release Notes New features: Removals: Bugfixes: Standard Library:  Haxe 4.0.0-preview.4  Release Notes New features: General improvements and optimizations: Removals: Bugfixes: Standard Library:  axe 4.0.0-preview.3  Release Notes New features: General improvements and optimizations: Removals: Deprecations: Bugfixes:   Haxe 4.0.0-preview.5 Release Notes Dear Community, On behalf of the Haxe Foundation, we are proud to announce the official release of the Haxe 4.">
+
+
+
+<meta itemprop="wordCount" content="2885">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Haxe 4.0 ￼
+ Haxe 4.0.0-preview.5  Release Notes New features: Removals: Bugfixes: Standard Library:  Haxe 4.0.0-preview.4  Release Notes New features: General improvements and optimizations: Removals: Bugfixes: Standard Library:  axe 4.0.0-preview.3  Release Notes New features: General improvements and optimizations: Removals: Deprecations: Bugfixes:   Haxe 4.0.0-preview.5 Release Notes Dear Community, On behalf of the Haxe Foundation, we are proud to announce the official release of the Haxe 4."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        コンピュータS
+      </p>
+      <h1 class="f1 athelas mb1"></h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="0001-01-01T00:00:00Z">January 1, 0001</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="haxe-4-0">Haxe 4.0</h1>
+
+<p>￼</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=4 orderedList=true} -->
+
+<!-- code_chunk_output -->
+
+<ol>
+<li><a href="#haxe-400-preview5">Haxe 4.0.0-preview.5</a>
+
+<ol>
+<li><a href="#release-notes">Release Notes</a></li>
+<li><a href="#new-features">New features:</a></li>
+<li><a href="#removals">Removals:</a></li>
+<li><a href="#bugfixes">Bugfixes:</a></li>
+<li><a href="#standard-library">Standard Library:</a></li>
+</ol></li>
+<li><a href="#haxe-400-preview4">Haxe 4.0.0-preview.4</a>
+
+<ol>
+<li><a href="#release-notes-1">Release Notes</a></li>
+<li><a href="#new-features-1">New features:</a></li>
+<li><a href="#general-improvements-and-optimizations">General improvements and optimizations:</a></li>
+<li><a href="#removals-1">Removals:</a></li>
+<li><a href="#bugfixes-1">Bugfixes:</a></li>
+<li><a href="#standard-library-1">Standard Library:</a></li>
+</ol></li>
+<li><a href="#axe-400-preview3">axe 4.0.0-preview.3</a>
+
+<ol>
+<li><a href="#release-notes-2">Release Notes</a></li>
+<li><a href="#new-features-2">New features:</a></li>
+<li><a href="#general-improvements-and-optimizations-1">General improvements and optimizations:</a></li>
+<li><a href="#removals-2">Removals:</a></li>
+<li><a href="#deprecations">Deprecations:</a></li>
+<li><a href="#bugfixes-2">Bugfixes:</a></li>
+</ol></li>
+</ol>
+
+<!-- /code_chunk_output -->
+
+<h3 id="haxe-4-0-0-preview-5">Haxe 4.0.0-preview.5</h3>
+
+<h4 id="release-notes">Release Notes</h4>
+
+<pre><code>Dear Community,
+
+On behalf of the Haxe Foundation, we are proud to announce the official release of the Haxe 4.0.0-preview.5! It is available along with the changelog at https://haxe.org/download.
+
+As a preview release, it should not be considered stable. However, we appreciate anyone testing this version which will help us with the real Haxe 4 release. Please report any issues here:
+
+https://github.com/HaxeFoundation/haxe/issues
+
+Thank you very much for your help!
+</code></pre>
+
+<h4 id="new-features">New features:</h4>
+
+<ol>
+<li>all : support Unicode strings properly on all targets</li>
+<li>all : support for (key =&gt; value in e)syntax for key-value iterators
+キーと値を同時に取り出せるようになった。</li>
+<li>all : added keyValueIterator to Map and its implementations</li>
+<li>all : support loop-unrolling on for (i in 0&hellip;5) (#7365)</li>
+<li>all : added support for write-mode @:op(a.b)</li>
+<li>all : support inline call() and inline new expressions (#7425)</li>
+<li>all : support @:using on type declarations (#7462)</li>
+<li>all : support XML literal strings but require them to be macro-processed (#7438)</li>
+<li>all : allow enum values without arguments as default function argument values (#7439)</li>
+<li>lua : add -D lua-vanilla, which emits code with reduced functionality but no additional lib dependencies</li>
+<li>General improvements and optimizations:</li>
+<li>all : [breaking] reserved operator and overload as keywords (#7413)</li>
+<li>all : made final on structure fields invariant (#7039)</li>
+<li>all : [breaking] disallowed static variables that have no type-hint and expression (#6440)</li>
+<li>all : added display/typeDefinition to display protocol (#7266)</li>
+<li>all : fixed various display-related problems</li>
+<li>all : made parser in display mode much more tolerant</li>
+<li>all : allowed assigning [] where Mapis expected (#7426)</li>
+<li>all : unified various parts of the String API across all targets</li>
+<li>php : Optimized haxe.ds.Vector (VectorData is not Array anymore)</li>
+<li>php : Optimized Map.copy() and Array.copy()</li>
+<li>php : Optimized iterators of Map and native arrays.</li>
+<li>php : Support native PHP generators. See php.Syntax.yield() and php.Generator</li>
+<li>js : updated HTML externs</li>
+<li>eval : improved object prototype field handling (#7393)</li>
+<li>eval : optimized int switches (#7481)</li>
+<li>eval : improved IntMap and StringMap performance</li>
+
+<li><p>eval : improved performance of instance calls</p>
+
+<h4 id="removals">Removals:</h4></li>
+
+<li><p>all : disallowed get_x/set_x property syntax, use get/set instead (#4699)</p></li>
+
+<li><p>all : disallowed default values on interface variables (#4087)</p></li>
+
+<li><p>all : disallowed implements Dynamic on non-extern classes (#6191)</p></li>
+
+<li><p>all : warn about expressions in extern non-inline fields (#5898)</p></li>
+
+<li><p>all : removed -D use-rtti-doc, always store documentation instead (#7493)</p></li>
+
+<li><p>all : disallowed macro-in-macro calls (#7496)</p></li>
+
+<li><p>js : removed jQuery and swfobject externs (#7494)</p>
+
+<h4 id="bugfixes">Bugfixes:</h4></li>
+
+<li><p>all : fix GC compacting too often in server mode</p></li>
+
+<li><p>all : [breaking] function () { }(e) is no longer parsed as a call (#5854)</p></li>
+
+<li><p>all : fixed various minor inlining issues</p></li>
+
+<li><p>all : disallowed return null from Void-functions (#7198)</p></li>
+
+<li><p>all : fixed various pattern matching problems</p></li>
+
+<li><p>all : fixed compiler hang in display mode (#7236)</p></li>
+
+<li><p>all : fixed the XML printer trimming CDATA content (#7454)</p></li>
+
+<li><p>all : fixed invalid visibility unification with statics (#7527)</p></li>
+
+<li><p>php : Escape $ in field names of anonymous objects (#7230)</p></li>
+
+<li><p>php : Generate switch as if&hellip;else if&hellip;else&hellip; to avoid loose comparison (#7257)</p></li>
+
+<li><p>cs : fixed bad evaluation order in structures (#7531)</p></li>
+
+<li><p>eval : fixed various problems with the debugger</p></li>
+
+<li><p>eval : fixed Vector.fromArrayCopy (#7492)</p></li>
+
+<li><p>eval : fixed bad string conversions on invalid + operations</p>
+
+<h4 id="standard-library">Standard Library:</h4></li>
+
+<li><p>all : [breaking] made Lambda functions return Array instead of List (#7097)</p></li>
+
+<li><p>all : added haxe.iterators package</p></li>
+
+<li><p>all : improved StringTools.lpad/rpad/htmlEscape implementation</p></li>
+</ol>
+
+<p>￼</p>
+
+<h3 id="haxe-4-0-0-preview-4">Haxe 4.0.0-preview.4</h3>
+
+<h4 id="release-notes-1">Release Notes</h4>
+
+<pre><code>Dear Community,
+On behalf of the Haxe Foundation, we are proud to announce the official release of the Haxe 4.0.0-preview.4! It is available along with the changelog at https://haxe.org/download.
+As a preview release, it should not be considered stable. However, we appreciate anyone testing this version which will help us with the real Haxe 4 release. Please report any issues here:
+https://github.com/HaxeFoundation/haxe/issues.
+Thank you very much for your help!
+Improved compiler display services
+Our focus for this release has been compiler display services. We implemented a new, JSON-RPC-based protocol which is utilized by the vshaxe Visual Studio Code Extension to provide a variety of new features:
+Support for auto-import
+Completion on override |
+Completion for structure field names
+Support for auto-generating structure declarations, functions, switches and more
+Context-aware, sorted toplevel completion
+Reference finding which explores modules that are not necessarily part of the compilation
+Improved enum abstracts
+Enum abstracts now get the treatment they deserve with a proper enum abstractsyntax. Furthermore, values can now be omitted if the enum abstract is defined over Int or String:
+enum abstract MyEnum(String) { var MyValue; // implicit = &quot;MyValue&quot; } enum abstract MyOtherEnum(Int) { var MyValue0; // implicit = 0 var MyValue1; // implicit = 1 var MyValue5 = 5; var MyValue6; // implicit = 6 } 
+Various syntactic improvements
+extern is now recognized as a field-level modifier and can be used instead of @:extern
+Metadata names can now use dots, e.g. @:haxe.json becomes a metadata entry named &quot;haxe.json&quot;
+Structure fields now consistently allow var ?x and final ?x, meaning the same as @:optional var x
+Type1 &amp; Type2 is now a recognized syntax for intersection types. For the time being, it is only supported to merge structures (replacing the { &gt;Type1, &gt;Type2, } syntax) and for type parameter constraints (replacing T:(Type1, Type2) which has been removed from the language).
+Lots of bugfixes
+See the changelog for more!
+</code></pre>
+
+<h4 id="new-features-1">New features:</h4>
+
+<ol>
+<li>all : added JSON-RPC-based display protocol</li>
+<li>all : allow enum abstract syntax instead of @:enum abstract (#4282)</li>
+<li>all : allow extern on fields instead of @:extern</li>
+<li>all : support signature completion on incomplete structures (#5767)</li>
+<li>all : support auto-numbering and auto-stringification in enum abstracts (#7139)</li>
+
+<li><p>all : support Type1 &amp; Type2intersection syntax for type parameter constraints and structures (#7127)</p>
+
+<h4 id="general-improvements-and-optimizations">General improvements and optimizations:</h4></li>
+
+<li><p>all : reworked CLI usage/help output (#6862)</p></li>
+
+<li><p>all : implemented for loop unrolling (#3784)</p></li>
+
+<li><p>all : metadata can now use ., e.g. @:a.b. This is represented as a string (#3959)</p></li>
+
+<li><p>all : [breaking] disallow static extensions on implicit this (#6036)</p></li>
+
+<li><p>all : allow true and false expressions as type parameters (#6958)</p></li>
+
+<li><p>all : improved display support in many areas</p></li>
+
+<li><p>all : support override | completion</p></li>
+
+<li><p>all : make display/references and display/toplevel actually work sometimes</p></li>
+
+<li><p>all : allow var ?x and final ?xparsing in structures (#6947)</p></li>
+
+<li><p>all : improved overall robustness of the parser in display mode</p></li>
+
+<li><p>all : allow @:commutative on non-static abstract functions (#5599)</p></li>
+
+<li><p>js : added externs for js.Date (#6855)</p></li>
+
+<li><p>js : respect -D source-map flag to generate source maps in release builds</p></li>
+
+<li><p>js : enums are now generated as objects instead of arrays (#6350)</p></li>
+
+<li><p>eval : improved debugger, support conditional breakpoints</p>
+
+<h4 id="removals-1">Removals:</h4></li>
+
+<li><p>all : moved haxe.remoting to hx3compat</p></li>
+
+<li><p>js : moved js.XMLSocket to hx3compat</p></li>
+
+<li><p>neko : moved neko.net to hx3compat</p></li>
+
+<li><p>all : removed support for T:(A, B)constraint syntax</p>
+
+<h4 id="bugfixes-1">Bugfixes:</h4></li>
+
+<li><p>all : fixed various issues with diagnostics</p></li>
+
+<li><p>all : fixed fields with default values for @:structInit classes (#5449)</p></li>
+
+<li><p>all : fixed Null<T> inconsistency in if/ternary expressions (#6955)</p></li>
+
+<li><p>all : fixed visibility check related to private constructors of sibling classes (#6957)</p></li>
+
+<li><p>all : fixed @:generic naming (#6968)</p></li>
+
+<li><p>all : fixed handling of type parameters in local functions (#6560)</p></li>
+
+<li><p>all : fixed resolution order between untyped and type parameters (#7113)</p></li>
+
+<li><p>all : fixed unification behavior in try/catch expressions (#7120)</p></li>
+
+<li><p>all : fixed field type being lost for Int expressions on Float fields (#7132)</p></li>
+
+<li><p>all : cleaned up inline handling (#7155)</p></li>
+
+<li><p>display : fixed completion in packages starting with underscore (#5417)</p></li>
+
+<li><p>php : fixed Reflect.callMethod with classes as first argument (#7106)</p></li>
+
+<li><p>eval : fixed internal exception surfacing in some context calls (#7007)</p></li>
+
+<li><p>eval : fixed Type.enumEq (#6710)</p></li>
+
+<li><p>flash : fixed silently swallowing exceptions in getters/setters when invoked with Reflect methods (#5460, #6871)</p>
+
+<h4 id="standard-library-1">Standard Library:</h4></li>
+
+<li><p>all : added resize to Array (#6869)</p></li>
+
+<li><p>all : [breaking] removed return thisfrom some haxe.Http methods (#6980)</p></li>
+</ol>
+
+<p>￼</p>
+
+<h3 id="axe-4-0-0-preview-3">axe 4.0.0-preview.3</h3>
+
+<h4 id="release-notes-2">Release Notes</h4>
+
+<pre><code>Dear Community,
+On behalf of the Haxe Foundation, we are proud to announce the official release of the Haxe 4.0.0-preview.3! It is available along with the changelog at https://haxe.org/download.
+As a preview release, it should not be considered stable. However, we appreciate anyone testing this version which will help us with the real Haxe 4 release. Please report any issues here:
+https://github.com/HaxeFoundation/haxe/issues.
+Thank you very much for your help!
+The most important change of this preview release is the new function type syntax. It was proposed by Dan Korostelevand successfully passed through Haxe Evolution process.
+The new syntax provides a natural way for declaring function types with support for argument names which allows to create more readable self-explaining code:
+// no arguments () -&gt; Void // single argument (name:String) -&gt; Void // multiple (also, optional) arguments (name:String, ?age:Int) -&gt; Void // unnamed arguments (Int, String) -&gt; Bool // mixed arguments, why not (a:Int, ?String) -&gt; Void 
+While the old function type syntax is still supported, we would advise using the new one for writing new code.
+Since this preview, the final keyword is allowed in anonymous structure syntax using class notation:
+{ /** ordinary field */ var field1:Int; /** Immutable field */ final field2:String; } 
+This release also makes a few steps towards replacing untyped code:
+There are new js.Syntax.code(), php.Syntax.code() and other methods, which should be used for platform specific syntax that is not naturally achievable using Haxe syntax. The Syntax classe - unlike the untyped keyword - is type-safe and analyzer-friendly.
+The JavaScript target got performance optimizations for its x.iterator() and Std.is(value, MyClass) calls. The first one improves iteration over Iterable&lt;T&gt;, the second one is compiled to plain value instanceof MyClass instead of a function call where possible.
+SSL support was added to HTTP requests for the Python target.
+The PHP target does not need to call Reflect.compareMethods() anymore. Starting from this preview any functions can be compared with the == operator, just like it is done for most of the other targets.
+Of course, numerous other improvements and bugfixes were implemented. For more details, please refer to the changelog.
+</code></pre>
+
+<h4 id="new-features-2">New features:</h4>
+
+<ol>
+<li>all : added new function type syntax ((a:Int, b:String)-&gt;Void) (#6645)</li>
+<li>all : added column to StackItem.FilePos (#6665)</li>
+<li>all : added -D warn-var-shadowing</li>
+<li>all : added haxe.Log.formatOutput (#6738)</li>
+<li>js : added js.Syntax class for generating unsupported JavaScript syntax in a type-safe analyzer-friendly way</li>
+<li>js : added js.Map and js.Set and js.JsIterator extern definitions (ES6)</li>
+
+<li><p>hl : added hl.Format.digest, use it for native Sha1/Md5</p>
+
+<h4 id="general-improvements-and-optimizations-1">General improvements and optimizations:</h4></li>
+
+<li><p>all : made all non-warning/non-error compiler messages output to stdout (#4480)</p></li>
+
+<li><p>all : make DCE keep constructor if any instance field is kept (#6690)</p></li>
+
+<li><p>all : make final in structures use class notation</p></li>
+
+<li><p>display : added this and super to toplevel completion (#6051)</p></li>
+
+<li><p>php : implemented direct method comparison. No need to use Reflect.compareMethods()</p></li>
+
+<li><p>php : added php.Syntax.code() instead of deprecated untyped <strong>php</strong>()(#6708)</p></li>
+
+<li><p>php : added methods to php.Syntaxfor each php operator: ??, ?:, **etc. (#6708)</p></li>
+
+<li><p>python : add ssl support for http requests</p></li>
+
+<li><p>python : improve Sys.print(ln) code generation (#6184)</p></li>
+
+<li><p>js : generate faster code for x.iterator() calls (#6669)</p></li>
+
+<li><p>js : rework exception handling, added js.Lib.getOriginalException (#6713)</p></li>
+
+<li><p>js : generate value instanceof MyClassinstead of Std.is(value, MyClass)(#6687)</p></li>
+
+<li><p>js : use lazy getter for HaxeError.message instead of calling String(val) in the ctor (#6754)</p>
+
+<h4 id="removals-2">Removals:</h4></li>
+
+<li><p>php : removed php.Syntax.binop()(#6708)</p>
+
+<h4 id="deprecations">Deprecations:</h4></li>
+
+<li><p>php : deprecated support for untyped <strong>php</strong>, untyped <strong>call</strong> etc. Use php.Syntax instead.</p>
+
+<h4 id="bugfixes-2">Bugfixes:</h4></li>
+
+<li><p>all : delay interface accessor generation properly (#6225, #6672)</p></li>
+
+<li><p>all : fixed unbound variable error in anonymous functions (#6674)</p></li>
+
+<li><p>all : fixed abstract @:to used when from is available in a specific case (#6751)</p></li>
+
+<li><p>all : sys.Http: fix chunked encoding handling (#6763)</p></li>
+
+<li><p>all : fix some invalid Json being accepted by haxe.format.JsonParser (#6734)</p></li>
+
+<li><p>all : fixed haxe.format.JsonPrinter for instances of classes to make it produce consistent result across targets (#6801)</p></li>
+
+<li><p>all : fixed autogenerated constructor for extending @:structInit classes (#6822, #6078)</p></li>
+
+<li><p>js : fixed saving setter to tmp var before invocation (#6672)</p></li>
+
+<li><p>lua : fix toString behavior in the case of -0 (#6652)</p></li>
+
+<li><p>lua : properly bind field functions when passed as arguments (#6722)</p></li>
+
+<li><p>php : don&rsquo;t fail on generating import aliases for classes with the similar names (#6680)</p></li>
+
+<li><p>php : fixed Sys.environment() to also return variables set by Sys.putEnv()</p></li>
+
+<li><p>php : fixed sys.net.Socket.bind()(#6693)</p></li>
+
+<li><p>php : fixed appending &ldquo;sqlite:&rdquo; prefix to the names of files created by sys.db.Sqlite.open() (#6692)</p></li>
+
+<li><p>php : made php.Lib.objectOfAssociativeArray() recursive (#6698)</p></li>
+
+<li><p>php : fixed php error on parsing expressions like a == b == c (#6720)</p></li>
+
+<li><p>php : fixed multiple file uploads in php.Web.parseMultiPart() (#4173)</p></li>
+
+<li><p>php : fixed an issue with &ldquo;Object&rdquo; used as a class name for PHP 7.2 (it&rsquo;s a new keyword in php) (#6838)</p></li>
+
+<li><p>eval : don&rsquo;t lose dynamic function inits from parent classes (#6660)</p></li>
+
+<li><p>cs : fix order-dependent enum type parameter issue (#6016)</p></li>
+</ol>
+
+<p>￼</p>
+
+<h3 id="haxe-4-0-0-preview-2">Haxe 4.0.0-preview.2</h3>
+
+<h4 id="release-notes-3">Release Notes</h4>
+
+<pre><code>Dear Community,
+
+On behalf of the Haxe Foundation I am proud to announce that Haxe 4.0.0-preview.2 is now officially released! It is available along with the changelog at https://haxe.org/download.
+
+This release removes the old PHP target, which means Haxe is going to output only PHP7 from now on. Furthermore, we are removing some parts of the standard library. For easier transition, they are still available in this haxelib: https://lib.haxe.org/p/hx3compat/
+
+The major new feature of this release is the addition of the final keyword, which can be used in place of var for class fields. For static fields, it behaves like var name(default, never). For instance fields, it allows assignment to the variable only from the class constructor. Further refinements and documentation will follow.
+
+There have also been, of course, various bugfixes. We will make an effort to have monthly preview releases for the remainder for 2017, and then move on to RC releases once we are happy with where Haxe 4 is.
+
+Please test your Haxe code with this version and let us know if you come across any problems at https://github.com/HaxeFoundation/haxe/issues.
+
+Thank you for your support
+</code></pre>
+
+<h4 id="new-features-3">New features:</h4>
+
+<ol>
+<li>all : added final keyword (#6596)</li>
+<li>General improvements and optimizations:</li>
+<li>all : replaced some occurrences of List with Array</li>
+<li>all : changed haxe.xml.Fast to an abstract</li>
+<li>all : improved optimization when comparing against null</li>
+<li>all : added support for case var xsyntax and detect possible typos (#6608)</li>
+
+<li><p>php : changed &ndash;php-prefix, &ndash;php-front and &ndash;php-lib to -D php-prefix=, -D php-front= and -D php-lib= respectively</p>
+
+<h4 id="removals-3">Removals:</h4></li>
+
+<li><p>all : moved haxe.unit to hx3compat</p></li>
+
+<li><p>all : moved haxe.web.Request to hx3compat</p></li>
+
+<li><p>php : dropped php5 support; minimum supported php version is 7.0 now</p>
+
+<h4 id="bugfixes-3">Bugfixes:</h4></li>
+
+<li><p>all : fixed issue with various functions not being displayed in macro context (#6000)</p></li>
+
+<li><p>all : fixed invalid static extension lookup on super (#3607)</p></li>
+
+<li><p>all : fixed typing error when constructing enums with abstracts over functions (#6609)</p></li>
+
+<li><p>all : fixed bug that skipped checking @:from typing in some cases (#6564)</p></li>
+
+<li><p>all : fixed Int64 parsing of negative numbers that end in a zero (#5493)</p></li>
+
+<li><p>all : fixed top-down inference when constructing enums (#6606)</p></li>
+
+<li><p>eval : fixed bug with equality handling</p></li>
+
+<li><p>eval : fixed issue with file creation not defaulting to binary</p></li>
+
+<li><p>eval : fixed invalid override detection (#6583)</p></li>
+
+<li><p>eval : fixed infinite recursion when printing arrays/vectors</p></li>
+
+<li><p>cs/java : fixed DCE bug that would lose toString method of thrown objects</p></li>
+
+<li><p>php/python : fixed some bit operators for Int32 (#5938)</p></li>
+
+<li><p>php : fixed accessing static inline var via reflection (#6630)</p></li>
+
+<li><p>php : fixed Math.min() and Math.max() for NAN on PHP 7.1.9 and 7.1.10</p></li>
+
+<li><p>js : fixed js syntax error for value.iterator&ndash; (#6637)</p>
+
+<h4 id="standard-library-2">Standard Library:</h4></li>
+
+<li><p>macro : added haxe.display.Position and PositionTools.toRange (#6599)</p></li>
+
+<li><p>all : moved List to haxe.ds (#6610)</p></li>
+</ol>
+
+<p>￼</p>
+
+<h4 id="haxe-4-0-0-preview-1">Haxe 4.0.0-preview.1</h4>
+
+<h4 id="release-notes-4">Release Notes</h4>
+
+<pre><code>This is a Haxe 4 preview release for the Haxe Summit 2017 in Amsterdam.
+
+As a preview release, it should not be considered stable and does, in fact, have some known issues. However, we appreciate anyone testing this version as it is going to ultimately help with the real Haxe 4 release. Please report issues at https://github.com/HaxeFoundation/haxe/issues.
+</code></pre>
+
+<h4 id="new-features-4">New features:</h4>
+
+<ol>
+<li>all : reworked macro interpreter</li>
+
+<li><p>all : added support for arrow functions</p>
+
+<h4 id="general-improvements-and-optimizations-2">General improvements and optimizations:</h4></li>
+
+<li><p>js : improved generation of breakinside switch inside loops (#4964)</p></li>
+
+<li><p>cs : improved generation of enum classes (#6119)</p></li>
+
+<li><p>sys : the database parameter of Mysql.connect is now optional</p></li>
+
+<li><p>js : updated jQuery extern (js.jquery.*) for jQuery 1.12.4 / 3.2.1 support.</p></li>
+
+<li><p>Makefile : default Unix installation location $(INSTALL_DIR) changed from /usr to /usr/local.</p></li>
+
+<li><p>Makefile : default Unix std location $(INSTALL_STD_DIR) changed from $(INSTALL_LIB_DIR)/std to $(INSTALL_DIR)/share/haxe/std.</p>
+
+<h4 id="removals-4">Removals:</h4></li>
+
+<li><p>all : removed &ndash;eval command line argument</p></li>
+
+<li><p>sys : SPOD (sys.db.Object, sys.db.Manager and friends) was moved into a separate library record-macros(<a href="https://github.com/HaxeFoundation/record-macros">https://github.com/HaxeFoundation/record-macros</a>)</p></li>
+
+<li><p>js : js.JQuery and js.SWFObject were moved into hx3compat library (<a href="https://github.com/HaxeFoundation/hx3compat">https://github.com/HaxeFoundation/hx3compat</a>),</p></li>
+
+<li><p>it&rsquo;s recommended to use more modern js.jquery.JQuery and js.swfobject.SWFObject classes.</p></li>
+
+<li><p>all : moved haxe.web.Dispatch into hx3compat library (<a href="https://github.com/HaxeFoundation/hx3compat">https://github.com/HaxeFoundation/hx3compat</a>).</p>
+
+<h4 id="bugfixes-4">Bugfixes:</h4></li>
+
+<li><p>php7: fix Reflect.field() for strings (#6276)</p></li>
+
+<li><p>php7: fix @:enum abstract generation without -dce full (#6175)</p></li>
+
+<li><p>php7: fix using enum constructor with arguments as a call argument (#6177)</p></li>
+
+<li><p>php7: fix null property access (#6281)</p></li>
+
+<li><p>php7: fix setting values in a map stored in another map (#6257)</p></li>
+
+<li><p>php7: fix haxe.io.Input.readAll() with disabled analyzer optimizations (#6387)</p></li>
+
+<li><p>php/php7: fixed accessing enum constructors on enum type stored to a variable (#6159)</p></li>
+
+<li><p>php/php7: fix &ldquo;cannot implement previously implemented interface&rdquo; (#6208)</p></li>
+
+<li><p>php: fix invoking functions stored in dynamic static vars (#6158)</p></li>
+
+<li><p>php: fix field access on new MyClass()expressions wrapped in a cast(#6294)</p>
+
+<h4 id="standard-library-3">Standard Library:</h4></li>
+
+<li><p>all : added EReg.escape (#5098)</p></li>
+
+<li><p>all : BalancedTree implements haxe.Constraints.IMap` (#6231)</p></li>
+</ol>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2019 My New Hugo Site
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="http://example.org/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

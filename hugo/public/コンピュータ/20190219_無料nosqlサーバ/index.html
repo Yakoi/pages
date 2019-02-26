@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="http://example.org/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="記録 20190223 MongoDB Atlas 使ってみた。512MBはちょっと小さいけど、まあいい感じじゃないですかね。
+20190219 Pocket整理 MongoDBもサーバレスプラットフォーム提供開始、「MongoDB Stitch」正式リリース https://www.publickey1.jp/blog/18/mongodbmongodb_stitch.html →無料じゃなかった。
+herokuに作る無料Node-Redサーバ（MongoDBも付いてくるよ） https://qiita.com/juicy/items/b4c97f75418d189f45a7
+【クラウドDB比較】無料枠で提供されるサービスレベル https://qiita.com/nh321/items/e8c63b02e3fa9c28837f
+ NoSQL(KVS：サーバ接続) サーバからアクセスする系
+ MongoDB@Atlas：DBなんかに時間をかけずアプリ開発に時間をかけたい人向けの高速なMongoDBクラウドサービス。 AmazonDynamoDB@AWS：どのような規模においてもパフォーマンスを必要とするアプリケーション用の非リレーショナルデータベース。 CloudBigtable@GCP：大量データの分析や操作に適したペタバイト規模のフルマネージド NoSQL データベース サービス。 CloudDataStore@GCP：ウェブ、モバイル アプリケーションのためのスケーラビリティの高い NoSQL データベース（Bigtableの機能を絞って、使いやすくしたサービス？）  NoSQL(KVS：クライアント接続) クライアントからもアクセスできちゃう系
+ CloudFireStroe@GCP：グローバルにスケールできるクラウドネイティブアプリのためのデータストア。（RealtimeDatabase@FirebaseとCloudDataStore@GCPのいいとこ取りって話を聞いた1） FireStroe@Firebase：（GCPのFireStoreと同一のモノ？入口が違うだけ？） RealtimeDatabase@Firebase：ユーザー間でリアルタイムにデータを保存および同期できる、クラウドホスト型 NoSQL データベース。  NoSQL(グラフDB) 調べた範囲では、選択肢が一つしかないので、比較しない。
+ AmazonNeptune@AWS：クラウド向けに構築された高速で信頼性の高いグラフデータベース。   MongoDB as a Service：MongoDB Atlas に無料プランが登場しました！ https://dev.classmethod.jp/server-side/db/mongodb-atlas-free-plan/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190219_%E7%84%A1%E6%96%99nosql%E3%82%B5%E3%83%BC%E3%83%90/" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="記録 20190223 MongoDB Atlas 使ってみた。512MBはちょっと小さいけど、まあいい感じじゃないですかね。
+20190219 Pocket整理 MongoDBもサーバレスプラットフォーム提供開始、「MongoDB Stitch」正式リリース https://www.publickey1.jp/blog/18/mongodbmongodb_stitch.html →無料じゃなかった。
+herokuに作る無料Node-Redサーバ（MongoDBも付いてくるよ） https://qiita.com/juicy/items/b4c97f75418d189f45a7
+【クラウドDB比較】無料枠で提供されるサービスレベル https://qiita.com/nh321/items/e8c63b02e3fa9c28837f
+ NoSQL(KVS：サーバ接続) サーバからアクセスする系
+ MongoDB@Atlas：DBなんかに時間をかけずアプリ開発に時間をかけたい人向けの高速なMongoDBクラウドサービス。 AmazonDynamoDB@AWS：どのような規模においてもパフォーマンスを必要とするアプリケーション用の非リレーショナルデータベース。 CloudBigtable@GCP：大量データの分析や操作に適したペタバイト規模のフルマネージド NoSQL データベース サービス。 CloudDataStore@GCP：ウェブ、モバイル アプリケーションのためのスケーラビリティの高い NoSQL データベース（Bigtableの機能を絞って、使いやすくしたサービス？）  NoSQL(KVS：クライアント接続) クライアントからもアクセスできちゃう系
+ CloudFireStroe@GCP：グローバルにスケールできるクラウドネイティブアプリのためのデータストア。（RealtimeDatabase@FirebaseとCloudDataStore@GCPのいいとこ取りって話を聞いた1） FireStroe@Firebase：（GCPのFireStoreと同一のモノ？入口が違うだけ？） RealtimeDatabase@Firebase：ユーザー間でリアルタイムにデータを保存および同期できる、クラウドホスト型 NoSQL データベース。  NoSQL(グラフDB) 調べた範囲では、選択肢が一つしかないので、比較しない。
+ AmazonNeptune@AWS：クラウド向けに構築された高速で信頼性の高いグラフデータベース。   MongoDB as a Service：MongoDB Atlas に無料プランが登場しました！ https://dev.classmethod.jp/server-side/db/mongodb-atlas-free-plan/">
+
+
+
+<meta itemprop="wordCount" content="44">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="記録 20190223 MongoDB Atlas 使ってみた。512MBはちょっと小さいけど、まあいい感じじゃないですかね。
+20190219 Pocket整理 MongoDBもサーバレスプラットフォーム提供開始、「MongoDB Stitch」正式リリース https://www.publickey1.jp/blog/18/mongodbmongodb_stitch.html →無料じゃなかった。
+herokuに作る無料Node-Redサーバ（MongoDBも付いてくるよ） https://qiita.com/juicy/items/b4c97f75418d189f45a7
+【クラウドDB比較】無料枠で提供されるサービスレベル https://qiita.com/nh321/items/e8c63b02e3fa9c28837f
+ NoSQL(KVS：サーバ接続) サーバからアクセスする系
+ MongoDB@Atlas：DBなんかに時間をかけずアプリ開発に時間をかけたい人向けの高速なMongoDBクラウドサービス。 AmazonDynamoDB@AWS：どのような規模においてもパフォーマンスを必要とするアプリケーション用の非リレーショナルデータベース。 CloudBigtable@GCP：大量データの分析や操作に適したペタバイト規模のフルマネージド NoSQL データベース サービス。 CloudDataStore@GCP：ウェブ、モバイル アプリケーションのためのスケーラビリティの高い NoSQL データベース（Bigtableの機能を絞って、使いやすくしたサービス？）  NoSQL(KVS：クライアント接続) クライアントからもアクセスできちゃう系
+ CloudFireStroe@GCP：グローバルにスケールできるクラウドネイティブアプリのためのデータストア。（RealtimeDatabase@FirebaseとCloudDataStore@GCPのいいとこ取りって話を聞いた1） FireStroe@Firebase：（GCPのFireStoreと同一のモノ？入口が違うだけ？） RealtimeDatabase@Firebase：ユーザー間でリアルタイムにデータを保存および同期できる、クラウドホスト型 NoSQL データベース。  NoSQL(グラフDB) 調べた範囲では、選択肢が一つしかないので、比較しない。
+ AmazonNeptune@AWS：クラウド向けに構築された高速で信頼性の高いグラフデータベース。   MongoDB as a Service：MongoDB Atlas に無料プランが登場しました！ https://dev.classmethod.jp/server-side/db/mongodb-atlas-free-plan/"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        コンピュータS
+      </p>
+      <h1 class="f1 athelas mb1"></h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="0001-01-01T00:00:00Z">January 1, 0001</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="記録">記録</h2>
+
+<h3 id="20190223-mongodb-atlas">20190223 MongoDB Atlas</h3>
+
+<p>使ってみた。512MBはちょっと小さいけど、まあいい感じじゃないですかね。</p>
+
+<h3 id="20190219-pocket整理">20190219 Pocket整理</h3>
+
+<h4 id="mongodbもサーバレスプラットフォーム提供開始-mongodb-stitch-正式リリース">MongoDBもサーバレスプラットフォーム提供開始、「MongoDB Stitch」正式リリース</h4>
+
+<p><a href="https://www.publickey1.jp/blog/18/mongodbmongodb_stitch.html">https://www.publickey1.jp/blog/18/mongodbmongodb_stitch.html</a>
+→無料じゃなかった。</p>
+
+<h4 id="herokuに作る無料node-redサーバ-mongodbも付いてくるよ">herokuに作る無料Node-Redサーバ（MongoDBも付いてくるよ）</h4>
+
+<p><a href="https://qiita.com/juicy/items/b4c97f75418d189f45a7">https://qiita.com/juicy/items/b4c97f75418d189f45a7</a></p>
+
+<h4 id="クラウドdb比較-無料枠で提供されるサービスレベル">【クラウドDB比較】無料枠で提供されるサービスレベル</h4>
+
+<p><a href="https://qiita.com/nh321/items/e8c63b02e3fa9c28837f">https://qiita.com/nh321/items/e8c63b02e3fa9c28837f</a></p>
+
+<blockquote>
+<p>NoSQL(KVS：サーバ接続)
+サーバからアクセスする系</p>
+
+<ol>
+<li>MongoDB@Atlas：DBなんかに時間をかけずアプリ開発に時間をかけたい人向けの高速なMongoDBクラウドサービス。</li>
+<li>AmazonDynamoDB@AWS：どのような規模においてもパフォーマンスを必要とするアプリケーション用の非リレーショナルデータベース。</li>
+<li>CloudBigtable@GCP：大量データの分析や操作に適したペタバイト規模のフルマネージド NoSQL データベース サービス。</li>
+<li>CloudDataStore@GCP：ウェブ、モバイル アプリケーションのためのスケーラビリティの高い NoSQL データベース（Bigtableの機能を絞って、使いやすくしたサービス？）</li>
+</ol>
+
+<p>NoSQL(KVS：クライアント接続)
+クライアントからもアクセスできちゃう系</p>
+
+<ol>
+<li>CloudFireStroe@GCP：グローバルにスケールできるクラウドネイティブアプリのためのデータストア。（RealtimeDatabase@FirebaseとCloudDataStore@GCPのいいとこ取りって話を聞いた1）</li>
+<li>FireStroe@Firebase：（GCPのFireStoreと同一のモノ？入口が違うだけ？）</li>
+<li>RealtimeDatabase@Firebase：ユーザー間でリアルタイムにデータを保存および同期できる、クラウドホスト型 NoSQL データベース。</li>
+</ol>
+
+<p>NoSQL(グラフDB)
+調べた範囲では、選択肢が一つしかないので、比較しない。</p>
+
+<ol>
+<li>AmazonNeptune@AWS：クラウド向けに構築された高速で信頼性の高いグラフデータベース。</li>
+</ol>
+</blockquote>
+
+<h4 id="mongodb-as-a-service-mongodb-atlas-に無料プランが登場しました">MongoDB as a Service：MongoDB Atlas に無料プランが登場しました！</h4>
+
+<p><a href="https://dev.classmethod.jp/server-side/db/mongodb-atlas-free-plan/">https://dev.classmethod.jp/server-side/db/mongodb-atlas-free-plan/</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2019 My New Hugo Site
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="http://example.org/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

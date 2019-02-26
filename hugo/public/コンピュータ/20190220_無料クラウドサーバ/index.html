@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="http://example.org/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="20190224 HTTPS 2 https://kunst1080.hatenablog.com/entry/2017/04/16/160224 https://qiita.com/kuboon/items/f424b84c718619460c6f ここ参照して、とりあえずできた。 全部Dockerで完結させるが吉。 STAGEのコメントアウトを外すと、ちゃんとした証明書を取得してくれて、 Chromeとかで接続したときに、よく見る「保護されていません」のエラーが出なくなる。 これで完成ではなかろうか。
+version: &#39;3&#39; services: app: build: context: . dockerfile: ./Dockerfile ports: - 3000 # localhost only by default links: - mongo:mongo - elasticsearch:elasticsearch depends_on: - mongo - elasticsearch environment: - MONGO_URI=mongodb://mongo:27017/growi - ELASTICSEARCH_URI=http://elasticsearch:9200/growi - PASSWORD_SEED=changeme # - FILE_UPLOAD=local # activate this line if you use local storage of server rather than AWS # - MATHJAX=1 # activate this line if you want to use MathJax # - PLANTUML_URI=http:// # activate this line and specify if you use your own PlantUML server rather than public plantuml." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF/20190220_%E7%84%A1%E6%96%99%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B5%E3%83%BC%E3%83%90/" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="20190224 HTTPS 2 https://kunst1080.hatenablog.com/entry/2017/04/16/160224 https://qiita.com/kuboon/items/f424b84c718619460c6f ここ参照して、とりあえずできた。 全部Dockerで完結させるが吉。 STAGEのコメントアウトを外すと、ちゃんとした証明書を取得してくれて、 Chromeとかで接続したときに、よく見る「保護されていません」のエラーが出なくなる。 これで完成ではなかろうか。
+version: &#39;3&#39; services: app: build: context: . dockerfile: ./Dockerfile ports: - 3000 # localhost only by default links: - mongo:mongo - elasticsearch:elasticsearch depends_on: - mongo - elasticsearch environment: - MONGO_URI=mongodb://mongo:27017/growi - ELASTICSEARCH_URI=http://elasticsearch:9200/growi - PASSWORD_SEED=changeme # - FILE_UPLOAD=local # activate this line if you use local storage of server rather than AWS # - MATHJAX=1 # activate this line if you want to use MathJax # - PLANTUML_URI=http:// # activate this line and specify if you use your own PlantUML server rather than public plantuml.">
+
+
+
+<meta itemprop="wordCount" content="2458">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="20190224 HTTPS 2 https://kunst1080.hatenablog.com/entry/2017/04/16/160224 https://qiita.com/kuboon/items/f424b84c718619460c6f ここ参照して、とりあえずできた。 全部Dockerで完結させるが吉。 STAGEのコメントアウトを外すと、ちゃんとした証明書を取得してくれて、 Chromeとかで接続したときに、よく見る「保護されていません」のエラーが出なくなる。 これで完成ではなかろうか。
+version: &#39;3&#39; services: app: build: context: . dockerfile: ./Dockerfile ports: - 3000 # localhost only by default links: - mongo:mongo - elasticsearch:elasticsearch depends_on: - mongo - elasticsearch environment: - MONGO_URI=mongodb://mongo:27017/growi - ELASTICSEARCH_URI=http://elasticsearch:9200/growi - PASSWORD_SEED=changeme # - FILE_UPLOAD=local # activate this line if you use local storage of server rather than AWS # - MATHJAX=1 # activate this line if you want to use MathJax # - PLANTUML_URI=http:// # activate this line and specify if you use your own PlantUML server rather than public plantuml."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        コンピュータS
+      </p>
+      <h1 class="f1 athelas mb1"></h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="0001-01-01T00:00:00Z">January 1, 0001</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h3 id="20190224-https-2">20190224 HTTPS 2</h3>
+
+<p><a href="https://kunst1080.hatenablog.com/entry/2017/04/16/160224">https://kunst1080.hatenablog.com/entry/2017/04/16/160224</a>
+<a href="https://qiita.com/kuboon/items/f424b84c718619460c6f">https://qiita.com/kuboon/items/f424b84c718619460c6f</a>
+ここ参照して、とりあえずできた。
+全部Dockerで完結させるが吉。
+STAGEのコメントアウトを外すと、ちゃんとした証明書を取得してくれて、
+Chromeとかで接続したときに、よく見る「保護されていません」のエラーが出なくなる。
+これで完成ではなかろうか。</p>
+
+<pre><code class="language-yaml">version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000    # localhost only by default
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
+    depends_on:
+      - mongo
+      - elasticsearch
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi
+      - PASSWORD_SEED=changeme
+      # - FILE_UPLOAD=local     # activate this line if you use local storage of server rather than AWS
+      # - MATHJAX=1             # activate this line if you want to use MathJax
+      # - PLANTUML_URI=http://  # activate this line and specify if you use your own PlantUML server rather than public plantuml.com
+      # - HACKMD_URI=http://    # activate this line and specify HackMD server URI which can be accessed from GROWI client browsers
+      # - HACKMD_URI_FOR_SERVER=http://hackmd:3000  # activate this line and specify HackMD server URI which can be accessed from this server container
+
+    command: &quot;dockerize
+              -wait tcp://mongo:27017
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod&quot;
+    restart: unless-stopped
+    volumes:
+      - growi_data:/data
+
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - '80:80'
+      - '443:443'
+    links:
+      - app
+    restart: always
+    environment:
+      DOMAINS: 'wiki.s-densan.tk -&gt; http://app:3000' # &lt;- rockerを使う場合は3838が必要！
+      # STAGE: 'production' # &lt;- 本番環境ではコメントアウトを外す
+
+
+  mongo:
+    image: mongo:3.4
+    ports:
+      - 27017:27017
+# command: mongod --bind_ip 0.0.0.0
+    restart: unless-stopped
+    volumes:
+      - mongo_configdb:/data/configdb
+      - mongo_db:/data/db
+
+  elasticsearch:
+    image: elasticsearch:5.3-alpine
+    environment:
+      - &quot;ES_JAVA_OPTS=-Xms256m -Xmx256m&quot;  # increase amount if you have enough memory
+    command:
+      - sh
+      - -c
+      - &quot;./bin/elasticsearch-plugin list | grep -q analysis-kuromoji || ./bin/elasticsearch-plugin install analysis-kuromoji;
+        ./bin/elasticsearch-plugin list | grep -q analysis-icu || ./bin/elasticsearch-plugin install analysis-icu;
+        /docker-entrypoint.sh elasticsearch&quot;
+    restart: unless-stopped
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+      - es_plugins:/usr/share/elasticsearch/plugins
+      - ./esconfig:/usr/share/elasticsearch/config
+
+volumes:
+  growi_data:
+  mongo_configdb:
+  mongo_db:
+  es_data:
+  es_plugins:
+</code></pre>
+
+<h3 id="20190224-https">20190224 HTTPS</h3>
+
+<p>sudo apt install certbot
+sudo wget -q -O /usr/local/bin/certbot-auto <a href="https://dl.eff.org/certbot-auto">https://dl.eff.org/certbot-auto</a>
+decide_in_the_eyes@growi:~$ #sudo chmod 700 /usr/local/bin/certbot-auto</p>
+
+<p><a href="https://qiita.com/ndxbn/items/7ef0a96e409a5b5837bd">https://qiita.com/ndxbn/items/7ef0a96e409a5b5837bd</a></p>
+
+<p>sudo wget -q -O /usr/local/bin/certbot-auto <a href="https://dl.eff.org/certbot-auto">https://dl.eff.org/certbot-auto</a>
+sudo chmod 700 /usr/local/bin/certbot-auto
+sudo certbot-auto certonly -d wiki.s-densan.tk
+sudo certbot-auto certonly &ndash;webroot &ndash;agree-tos -w /home/www/letsencrypt -m ippotei.tsukemen@gmail.com -d wiki.s-densan.tk</p>
+
+<p><a href="https://worklog.be/archives/3352#certbot-auto">https://worklog.be/archives/3352#certbot-auto</a></p>
+
+<p>Docker使っている場合
+<a href="https://tech.actindi.net/2018/09/20/093414">https://tech.actindi.net/2018/09/20/093414</a></p>
+
+<p>難しすぎてわからん。
+→ここがわかりやすい？
+<a href="https://qiita.com/setouchi/items/b3a78cb396ae6e58b84b">https://qiita.com/setouchi/items/b3a78cb396ae6e58b84b</a></p>
+
+<pre><code class="language-bash">decide_in_the_eyes@growi:~$ sudo docker run -it --rm -p 443:443 --name letsencrypt -v &quot;/etc/letsencrypt:/etc/letsencrypt&quot; -v &quot;/var/lib/letsencrypt:/var/lib/letsencrypt&quot; quay.io/letsencrypt/letsencrypt:latest certonly
+Warning: This Docker image will soon be switching to Alpine Linux.
+You can switch now using the certbot/certbot repo on Docker Hub.
+/opt/certbot/venv/local/lib/python2.7/site-packages/cryptography/hazmat/primitives/constant_time.py:26: CryptographyDeprecationWarning: Support for your Python version is deprecated. The next version of cryptography will remove support. Please upgrade to a 2.7.x release that supports hmac.compare_digest as soon as possible.
+  utils.DeprecatedIn23,
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+How would you like to authenticate with the ACME CA?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: Spin up a temporary webserver (standalone)
+2: Place files in webroot directory (webroot)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+Plugins selected: Authenticator standalone, Installer None
+Please enter in your domain name(s) (comma and/or space separated)  (Enter 'c'
+to cancel): s-densan.tk
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for s-densan.tk
+Waiting for verification...
+Cleaning up challenges
+Failed authorization procedure. s-densan.tk (http-01): urn:ietf:params:acme:error:connection :: The server could not connect to the client to verify the domain :: unknownHost :: No valid IP addresses found for s-densan.tk
+
+IMPORTANT NOTES:                                                                                                                                                                                                                                      
+ - The following errors were reported by the server:                                                                                                                                                                                                  
+
+   Domain: s-densan.tk
+   Type:   connection
+   Detail: unknownHost :: No valid IP addresses found for s-densan.tk
+
+   To fix these errors, please make sure that your domain name was
+   entered correctly and the DNS A/AAAA record(s) for that domain
+   contain(s) the right IP address. Additionally, please check that
+   your computer has a publicly routable IP address and that no
+   firewalls are preventing the server from communicating with the
+   client. If you're using the webroot plugin, you should also verify
+   that you are serving files from the webroot path you provided.
+</code></pre>
+
+<p>docker-compose.ymlのポートを書き換え</p>
+
+<p>vim docker-compose.yml</p>
+
+<pre><code class="language-yaml">    ports:
+      - 80:3000    # localhost only by default
+      - 443:3000    # localhost only by default
+</code></pre>
+
+<p>docker起動。
+sudo docker-compose up -d</p>
+
+<p>いや、確かにポート443でつながるようになったが、
+頭にhttpsをつけるとつながらない。そりゃそうなのかもしれない。</p>
+
+<h3 id="20190224-ドメインヒモ付">20190224 ドメインヒモ付</h3>
+
+<p>Freenomでドメイン取得。
+今回は<code>s-densan.tk</code>で取得。</p>
+
+<p>あとはここのサイトの言う通りに設定。
+<a href="https://qiita.com/esplo/items/bd2e36cfae797d0d480a">https://qiita.com/esplo/items/bd2e36cfae797d0d480a</a></p>
+
+<pre><code>GCP上で独自ドメインを使う
+独自ドメイン
+gcp
+Freenom
+この記事は最終更新日から1年以上が経過しています。
+背景
+前回の記事の続きです。
+今回は、前回立ち上げたRailsに独自ドメインでアクセスできるようにしてみます。
+
+特に手順として難しいものは無いですが、https化へのつなぎの意味合いが強い記事です。
+
+準備
+ドメインを持っていない方は、freenomなどで無料のドメインを登録しましょう。
+既に持っている方は、そちらをご利用ください。
+
+手順
+StaticなIPをもらう
+前回の手順の最後でExternal IPが得られたと思いますが、これはEphemeralなアドレスで、状況によって変更されてしまいます。
+そこで、これをStaticなアドレスに変更します。
+
+やり方は簡単。
+Webコンソールの左のメニュー &quot;Networking&quot; -&gt; &quot;External IP addresses&quot; から先ほどのIPの項目を選び、
+EphemeralとなっているtypeをStaticに変更するだけです。
+Nameは何でもOKです。
+
+DNSゾーンを作る
+まずはゾーンを作ります。
+&quot;Networking&quot; -&gt; &quot;Cloud DNS&quot; から、&quot;CREATE ZONE&quot;を押します。
+Zone nameには適当な名前、
+DNS nameには取得したドメインを入れます。
+
+すると、NSレコードが4つ表示されます。
+ns-cloud-b1.googledomains.com.など
+
+レジストラで設定
+このNSレコードをお使いのレジストラで設定します。
+
+freenomであれば、”Manage&quot; -&gt; &quot;Management Tools&quot; -&gt; &quot;Nameservers&quot;という所で5つまで設定できるので、1-4をgoogleのNameserverに設定します。
+&quot;Use custom nameservers (enter below)&quot;をクリックし忘れると保存されないので要注意です。
+
+Aレコードを設定する
+先ほどStaticにしたIPを指定したAレコードを作ります。
+
+確認
+適当な時間をおいてアクセスしてみます。
+IPでアクセスした場合と同じ表示が出れば成功です:tada:
+
+その他
+mailgunなどの設定ではドメイン認証が必要ですが、同じメニューでTXTレコードなどを追加できます。
+</code></pre>
+
+<p>ポート80でhttpアクセスできるように変更。
+コロンの左右を間違えないように。</p>
+
+<pre><code class="language-yaml">version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:3000    # localhost only by default
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
+    depends_on:
+      - mongo
+      - elasticsearch
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi
+      - PASSWORD_SEED=changeme
+      # - FILE_UPLOAD=local     # activate this line if you use local storage of server rather than AWS
+      # - MATHJAX=1             # activate this line if you want to use MathJax
+      # - PLANTUML_URI=http://  # activate this line and specify if you use your own PlantUML server rather than public plantuml.com
+      # - HACKMD_URI=http://    # activate this line and specify HackMD server URI which can be accessed from GROWI client browsers
+      # - HACKMD_URI_FOR_SERVER=http://hackmd:3000  # activate this line and specify HackMD server URI which can be accessed from this server container
+
+    command: &quot;dockerize
+              -wait tcp://mongo:27017
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod&quot;
+    restart: unless-stopped
+    volumes:
+      - growi_data:/data
+
+  mongo:
+    image: mongo:3.4
+    ports: 
+      - 27017:27017
+# command: mongod --bind_ip 0.0.0.0
+    restart: unless-stopped
+    volumes:
+      - mongo_configdb:/data/configdb
+      - mongo_db:/data/db
+
+  elasticsearch:
+    image: elasticsearch:5.3-alpine
+    environment:
+      - &quot;ES_JAVA_OPTS=-Xms256m -Xmx256m&quot;  # increase amount if you have enough memory
+    command:
+      - sh
+      - -c
+      - &quot;./bin/elasticsearch-plugin list | grep -q analysis-kuromoji || ./bin/elasticsearch-plugin install analysis-kuromoji;
+        ./bin/elasticsearch-plugin list | grep -q analysis-icu || ./bin/elasticsearch-plugin install analysis-icu;
+        /docker-entrypoint.sh elasticsearch&quot;
+    restart: unless-stopped
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+      - es_plugins:/usr/share/elasticsearch/plugins
+      - ./esconfig:/usr/share/elasticsearch/config
+
+volumes:
+  growi_data:
+  mongo_configdb:
+  mongo_db:
+  es_data:
+  es_plugins:
+</code></pre>
+
+<p>ゾーンの詳細の「レコードセットを追加」ボタンから、Aレコードを追加。
+最終設定はこちら。
+|      DNS 名       | タイプ | TTL（秒） |                                                                     データ                                                                      |
+| &mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash; | &mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; |
+| s-densan.tk.      | NS     | 21600     | ns-cloud-e1.googledomains.com.<br/> ns-cloud-e2.googledomains.com.<br/> ns-cloud-e3.googledomains.com.<br/> ns-cloud-e4.googledomains.com.<br/> |
+| s-densan.tk.      | SOA    | 21600     | ns-cloud-e1.googledomains.com. cloud-dns-hostmaster.google.com. 1 21600 3600 259200 300                                                         |
+| wiki.s-densan.tk. | A      | 300       | 35.197.65.19                                                                                                                                    |</p>
+
+<p><a href="http://wiki.s-densan.tk">http://wiki.s-densan.tk</a>でつながるように。</p>
+
+<h3 id="20190224-mongodb-export">20190224 MongoDB Export</h3>
+
+<p>mongodb本体は必要ないので、ツールのみインストール。</p>
+
+<pre><code class="language-bash">sudo apt install mongo-tools -y
+</code></pre>
+
+<p>DB名とかコレクション名とかはMongoDB Compassで調べる。</p>
+
+<pre><code class="language-bash">decide_in_the_eyes@growi:~$ sudo mongoexport -h localhost:27017 -d growi -c users --out users.json
+2019-02-24T04:38:31.099+0000    connected to: localhost:27017
+2019-02-24T04:38:31.130+0000    exported 2 records
+decide_in_the_eyes@growi:~$ cat users.json
+{&quot;_id&quot;:{&quot;$oid&quot;:&quot;5c7163aec6c034003de33c4e&quot;},&quot;isGravatarEnabled&quot;:false,&quot;isEmailPublished&quot;:false,&quot;lang&quot;:&quot;ja&quot;,&quot;status&quot;:2,&quot;admin&quot;:true,&quot;createdAt&quot;:{&quot;$date&quot;:&quot;2019-02-23T15:15:58.897Z&quot;},&quot;name&quot;:&quot;上野 慎平&quot;,&quot;username&quot;:&quot;shimpei.ueno&quot;,&quot;email&quot;:&quot;smpi.un.jkb.2357@gmail.com&quot;,&quot;password&quot;:&quot;c024e42b2880a123d2dc48ad86b7c51333ea2bc64849f50c22d5f8c08a45cae4&quot;,&quot;__v&quot;:0}
+{&quot;_id&quot;:{&quot;$oid&quot;:&quot;5c7170d5c6c034003de33c5c&quot;},&quot;isGravatarEnabled&quot;:false,&quot;isEmailPublished&quot;:true,&quot;lang&quot;:&quot;ja&quot;,&quot;status&quot;:4,&quot;admin&quot;:false,&quot;createdAt&quot;:{&quot;$date&quot;:&quot;2019-02-23T16:12:05.868Z&quot;},&quot;username&quot;:&quot;deleted_at_1550938577439&quot;,&quot;email&quot;:&quot;deleted_at_1550938577439@deleted&quot;,&quot;password&quot;:&quot;&quot;,&quot;__v&quot;:0,&quot;lastLoginAt&quot;:{&quot;$date&quot;:&quot;2019-02-23T16:14:09.444Z&quot;},&quot;name&quot;:&quot;&quot;,&quot;googleId&quot;:null,&quot;image&quot;:null}
+</code></pre>
+
+<h3 id="20190224-aptで導入してしまったmongoの削除">20190224 aptで導入してしまったmongoの削除</h3>
+
+<pre><code class="language-bash">sudo dpkg -l | grep mongo
+ii  mongodb-clients                      1:3.6.3-0ubuntu1                    amd64        object/document-oriented database (client apps)
+rc  mongodb-server                       1:3.6.3-0ubuntu1                    all          object/document-oriented database (managed server package)
+ii  mongodb-server-core                  1:3.6.3-0ubuntu1                    amd64        object/document-oriented database (server binaries package)
+</code></pre>
+
+<pre><code class="language-bash">sudo apt remove mongodb-server -y
+sudo apt remove mongodb-clients -y
+sudo apt remove mongodb-server-core -y
+sudo apt autoremove mongodb-server -y
+</code></pre>
+
+<p><a href="http://shoprev.hatenablog.com/entry/2014/09/25/205414">http://shoprev.hatenablog.com/entry/2014/09/25/205414</a></p>
+
+<h3 id="20190224-外部からdocker内のmongo-dbに接続">20190224 外部からDocker内のMongo DBに接続</h3>
+
+<p>docker-compose.ymlのmongoのところに以下の一文を入れる。</p>
+
+<pre><code class="language-yaml">    ports: 
+      - 27017:27017
+</code></pre>
+
+<p>Dockerの内外のポートの関連付けかな。
+MongoDB Compassからもアクセスできるようになる。</p>
+
+<h3 id="20190224-mongodb-export-1">20190224 MongoDB Export</h3>
+
+<p>mongodbにmongoexportというコマンドがセットでついてくるらしいが、今のやり方(Dockerからインストール)だとインストールされないらしい。</p>
+
+<pre><code>sudo apt install mongodb -y
+</code></pre>
+
+<h3 id="20190223-mongodbを外部化">20190223 MongoDBを外部化</h3>
+
+<p>できなかった。
+MongoDB Atlasで予めデータベースを作成、ファイアウォールを設定済み。</p>
+
+<p>うまく行かなかった設定がこちら。</p>
+
+<pre><code class="language-yaml">version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000    # localhost only by default
+    links:
+      - elasticsearch:elasticsearch
+    depends_on:
+      - elasticsearch
+    environment:
+      #- MONGO_URI=mongodb://dbuser:dbpass@growi-shard-00-00-rl3ss.mongodb.net:27017,growi-shard-00-01-rl3ss.mongodb.net:27017,growi-shard-00-02-rl3ss.mongodb.net:27017/test?ssl=true&amp;replicaSet=growi-shard-0&amp;authSource=admin&amp;retryWrites=true
+      - MONGO_URI=mongodb+srv://dbuser:dbpass@growi-rl3ss.mongodb.net/test?retryWrites=true
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi
+      - PASSWORD_SEED=changeme
+      # - FILE_UPLOAD=local     # activate this line if you use local storage of server rather than AWS
+      # - MATHJAX=1             # activate this line if you want to use MathJax
+      # - PLANTUML_URI=http://  # activate this line and specify if you use your own PlantUML server rather than public plantuml.com
+      # - HACKMD_URI=http://    # activate this line and specify HackMD server URI which can be accessed from GROWI client browsers
+      # - HACKMD_URI_FOR_SERVER=http://hackmd:3000  # activate this line and specify HackMD server URI which can be accessed from this server container
+
+    command: &quot;dockerize
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod&quot;
+    restart: unless-stopped
+    volumes:
+      - growi_data:/data
+
+
+  elasticsearch:
+    image: elasticsearch:5.3-alpine
+    environment:
+      - &quot;ES_JAVA_OPTS=-Xms256m -Xmx256m&quot;  # increase amount if you have enough memory
+    command:
+      - sh
+      - -c
+      - &quot;./bin/elasticsearch-plugin list | grep -q analysis-kuromoji || ./bin/elasticsearch-plugin install analysis-kuromoji;
+        ./bin/elasticsearch-plugin list | grep -q analysis-icu || ./bin/elasticsearch-plugin install analysis-icu;
+        /docker-entrypoint.sh elasticsearch&quot;
+    restart: unless-stopped
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+      - es_plugins:/usr/share/elasticsearch/plugins
+      - ./esconfig:/usr/share/elasticsearch/config
+
+volumes:
+  growi_data:
+  es_data:
+  es_plugins:
+</code></pre>
+
+<h3 id="20190223-検索機能有効化">20190223 検索機能有効化</h3>
+
+<p>メモリ不足な気がする。
+4GB必要とのこと。
+<a href="https://qiita.com/SkyLaptor/items/c121a86318fdae1d64f4">https://qiita.com/SkyLaptor/items/c121a86318fdae1d64f4</a></p>
+
+<pre><code class="language-bash">free -m
+              total        used        free      shared  buff/cache   available
+Mem:            579         182         183           0         213         305
+Swap:          1023          85         938
+</code></pre>
+
+<pre><code class="language-bash">sudo swapoff /swapfile
+sudo dd if=/dev/zero of=/swapfile bs=1M count=4096
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+</code></pre>
+
+<pre><code class="language-bash">free -m
+              total        used        free      shared  buff/cache   available
+Mem:            579         253          44           0         281         231
+Swap:          4095           0        4095
+
+</code></pre>
+
+<pre><code class="language-bash">sudo docker-compose up -d
+</code></pre>
+
+<p>成功しました。
+メモリ少ねえ。
+MongoDBを外部化してやろうか。</p>
+
+<pre><code class="language-bash">decide_in_the_eyes_gmail_com@instance-1:~/growi$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            579         470          40           0          67          31
+Swap:          4095         417        3678
+</code></pre>
+
+<p>docker-compose.ymlは以下の通り</p>
+
+<pre><code class="language-yaml">version: '3'
+  
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000    # localhost only by default
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
+    depends_on:
+      - mongo
+      - elasticsearch
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi
+      - PASSWORD_SEED=changeme
+      # - FILE_UPLOAD=local     # activate this line if you use local storage of server rather than AWS
+      # - MATHJAX=1             # activate this line if you want to use MathJax
+      # - PLANTUML_URI=http://  # activate this line and specify if you use your own PlantUML server rather than public plantuml.com
+      # - HACKMD_URI=http://    # activate this line and specify HackMD server URI which can be accessed from GROWI client browsers
+      # - HACKMD_URI_FOR_SERVER=http://hackmd:3000  # activate this line and specify HackMD server URI which can be accessed from this server container
+
+    command: &quot;dockerize
+              -wait tcp://mongo:27017
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod&quot;
+    restart: unless-stopped
+    volumes:
+      - growi_data:/data
+
+  mongo:
+    image: mongo:3.4
+    restart: unless-stopped
+    volumes:
+      - mongo_configdb:/data/configdb
+      - mongo_db:/data/db
+
+  elasticsearch:
+    image: elasticsearch:5.3-alpine
+    environment:
+      - &quot;ES_JAVA_OPTS=-Xms256m -Xmx256m&quot;  # increase amount if you have enough memory
+    command:
+      - sh
+      - -c
+      - &quot;./bin/elasticsearch-plugin list | grep -q analysis-kuromoji || ./bin/elasticsearch-plugin install analysis-kuromoji;
+        ./bin/elasticsearch-plugin list | grep -q analysis-icu || ./bin/elasticsearch-plugin install analysis-icu;
+        /docker-entrypoint.sh elasticsearch&quot;
+    restart: unless-stopped
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+      - es_plugins:/usr/share/elasticsearch/plugins
+      - ./esconfig:/usr/share/elasticsearch/config
+
+volumes:
+  growi_data:
+  mongo_configdb:
+  mongo_db:
+  es_data:
+  es_plugins:
+</code></pre>
+
+<h3 id="20190223-とりあえず起動">20190223 とりあえず起動</h3>
+
+<h4 id="スワップ領域確保">スワップ領域確保</h4>
+
+<p><a href="https://www.karelie.net/free-fast-wordpress-site-kusanagi-docker/#toc_-2">https://www.karelie.net/free-fast-wordpress-site-kusanagi-docker/#toc_-2</a>
+作業の前にスワップ領域がないことを下記のコマンドで確認してみよう。</p>
+
+<pre><code class="language-bash">free -m
+</code></pre>
+
+<p>Swapが下記のように「0」と表示されていれば未設定。</p>
+
+<pre><code class="language-bash">              total        used        free      shared  buff/cache   available
+Mem:            588         267          83          42         237         149
+Swap:             0           0           0
+</code></pre>
+
+<p>Swapファイル領域を確保（処理に1ー2分かかる）</p>
+
+<pre><code class="language-bash">sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
+</code></pre>
+
+<p>パーミッションを変更</p>
+
+<pre><code class="language-bash">sudo chmod 600 /swapfile
+</code></pre>
+
+<p>Swapの作成</p>
+
+<pre><code class="language-bash">sudo mkswap /swapfile
+</code></pre>
+
+<p>Swapを有効にする</p>
+
+<pre><code class="language-bash">sudo swapon /swapfile
+</code></pre>
+
+<p>Swapの確認</p>
+
+<p>先ほど「0」になっていたのが「1023」となっている。</p>
+
+<pre><code class="language-bash">free -m
+              total        used        free      shared  buff/cache   available
+Mem:            588         256          69          42         262         159
+Swap:          1023           0        1023
+</code></pre>
+
+<p>このままでは再起動した際にSwapファイルは無効になるので下記のコマンドで永続化する必要がある。長いコマンドなのでちゃんと行末までコピペするように。</p>
+
+<pre><code>sudo sed -i '$ a /swapfile                                 swap                    swap    defaults        0 0' /etc/fstab
+</code></pre>
+
+<p>念のために再起動。問題なくSwapが永続されているかを確認してみよう。</p>
+
+<h4 id="dockerインストール">Dockerインストール</h4>
+
+<p><a href="https://www.karelie.net/free-fast-wordpress-site-kusanagi-docker/#docker">https://www.karelie.net/free-fast-wordpress-site-kusanagi-docker/#docker</a>
+Dockerをインストール
+次にDockerに必要なパッケージをインストールする。</p>
+
+<pre><code>curl -fsSL https://get.docker.com/ | sh
+</code></pre>
+
+<p>問題なく起動しているか確認するために下記のコマンドを実行してみよう。</p>
+
+<pre><code class="language-bash">sudo docker run hello-world
+</code></pre>
+
+<p>問題なくインストールされていれば</p>
+
+<pre><code class="language-bash">Hello from Docker!
+This message shows that your installation appears to be working correctly.
+</code></pre>
+
+<p>と表示されているはずだ。</p>
+
+<p>再起動しても自動的にDockerが起動するように下記のコマンドを実行。</p>
+
+<pre><code class="language-bash">sudo systemctl enable docker
+</code></pre>
+
+<p>問題なく動作するか確認するためにVMインスタンスを下記のコマンドで再起動させてみる。</p>
+
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+
+<p>SSH 再接続
+上記のような画面が表示されるので「再接続」をクリック。再起動には１〜２分かかる。</p>
+
+<p>もう一度下記のコマンドを実行し動作していれば大丈夫。</p>
+
+<pre><code class="language-bash">sudo docker run hello-world
+</code></pre>
+
+<h4 id="docker-compose">Docker Compose</h4>
+
+<p><a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a>
+※コマンドにバージョン情報が含まれるため、最新のホームページを確認すること。
+&gt; Install Compose on Linux systems
+&gt; On Linux, you can download the Docker Compose binary from the Compose repository release page on GitHub. Follow the instructions from the link, which involve running the curl command in your terminal to download the binaries. These step by step instructions are also included below.
+&gt;
+&gt; Run this command to download the latest version of Docker Compose:
+&gt;
+&gt; <code>bash
+&gt; sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+&gt;</code>
+&gt; Use the latest Compose release number in the download command.
+&gt;
+&gt; The above command is an example, and it may become out-of-date. To ensure you have the latest version, check the Compose repository release page on GitHub.
+&gt;
+&gt; If you have problems installing with curl, see Alternative Install Options tab above.
+&gt;
+&gt; Apply executable permissions to the binary:
+&gt;
+&gt; <code>bash
+&gt; sudo chmod +x /usr/local/bin/docker-compose
+&gt;</code>
+&gt; Note: If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
+&gt;
+&gt; For example:
+&gt;
+&gt; <code>bash
+&gt; sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+&gt;</code>
+&gt; Optionally, install command completion for the bash and zsh shell.
+&gt;
+&gt; Test the installation.
+&gt;
+&gt; <code>bash
+&gt; $ docker-compose --version
+&gt; docker-compose version 1.23.2, build 1110ad01
+&gt;</code></p>
+
+<h3 id="gitインストール">gitインストール</h3>
+
+<p>入っていなければ。
+<a href="http://exrecord.net/how-to-install-growi-using-docker-compose#GROWI-3">http://exrecord.net/how-to-install-growi-using-docker-compose#GROWI-3</a>
+&gt; パッケージからGitをインストール
+&gt; Gitはパッケージからインストールできます。パッケージをアップデートしたあとに、Gitをインストールします。
+&gt; <code>bash
+&gt; $ sudo apt-get update
+&gt; $ sudo apt-get install git
+&gt;</code>
+&gt; gitが使えるか確認
+&gt; docker-composeと同じように、問題なくインストールできたか確認のため、「git」コマンドでバージョンを確認してみましょう。
+&gt;
+&gt; <code>bash
+&gt; $ git --version
+&gt; git version 2.17.1
+&gt;</code></p>
+
+<h4 id="growi-インストール">Growi インストール</h4>
+
+<p><a href="http://exrecord.net/how-to-install-growi-using-docker-compose#GROWI-3">http://exrecord.net/how-to-install-growi-using-docker-compose#GROWI-3</a>
+&gt; GithubからGROWIのリポジトリをクローン
+&gt; それでは、「git」コマンドでGROWIのリポジトリをクローンします。クローン後、カレントディレクトリに「growi」というフォルダが作成されます。
+&gt;
+&gt; <code>bash
+&gt; $ git clone https://github.com/weseek/growi-docker-compose.git growi
+&gt; $ ls -ld growi
+&gt; drwxr-xr-x 6 user user 4096 Oct 10 18:58 growi
+&gt;</code>
+&gt; docker-composeでGROWIを起動
+&gt; GROWIのインストールができましたので、あとはGROWIを起動できるか確認します。先ほど作成された「growi」のディレクトリに移動したあと、「docker-compose」コマンドで起動してみましょう。
+&gt;
+&gt; <code>bash
+&gt; $ cd growi
+&gt; $ sudo docker-compose up
+&gt;</code>
+&gt; GROWIにアクセス
+&gt; それでは、GROWIにWebブラウザからアクセスしてみましょう。デフォルトでは、3000ポートでアクセスできますので、「<a href="http://localhost:3000」でアカウント作成画面が表示されましたら、問題なく起動できています。">http://localhost:3000」でアカウント作成画面が表示されましたら、問題なく起動できています。</a></p>
+
+<p><code>~/growi/docker-compose.yml</code>は以下の通りにしました。
+elasticsearchを有効にすると起動に失敗するので削除。検索できないのかな？何に使っているんだろう。</p>
+
+<pre><code class="language-yaml">version: '3'
+  
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000    # localhost only by default
+    links:
+      - mongo:mongo
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi
+      - PASSWORD_SEED=changeme
+      # - FILE_UPLOAD=local     # activate this line if you use local storage of server rather than AWS
+      # - MATHJAX=1             # activate this line if you want to use MathJax
+      # - PLANTUML_URI=http://  # activate this line and specify if you use your own PlantUML server rather than public plantuml.com
+      # - HACKMD_URI=http://    # activate this line and specify HackMD server URI which can be accessed from GROWI client browsers
+      # - HACKMD_URI_FOR_SERVER=http://hackmd:3000  # activate this line and specify HackMD server URI which can be accessed from this server container
+
+    command: &quot;dockerize
+              -wait tcp://mongo:27017
+              -timeout 60s
+              npm run server:prod&quot;
+    restart: unless-stopped
+    volumes:
+      - growi_data:/data
+
+  mongo:
+    image: mongo:3.4
+    restart: unless-stopped
+    volumes:
+      - mongo_configdb:/data/configdb
+      - mongo_db:/data/db
+
+
+volumes:
+  growi_data:
+  mongo_configdb:
+  mongo_db:
+  es_data:
+  es_plugins:
+</code></pre>
+
+<p>↓はオリジナル。</p>
+
+<pre><code class="language-yaml">version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 127.0.0.1:3000:3000    # localhost only by default
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
+    depends_on:
+      - mongo
+      - elasticsearch
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/growi
+      - ELASTICSEARCH_URI=http://elasticsearch:9200/growi
+      - PASSWORD_SEED=changeme
+      # - FILE_UPLOAD=local     # activate this line if you use local storage of server rather than AWS
+      # - MATHJAX=1             # activate this line if you want to use MathJax
+      # - PLANTUML_URI=http://  # activate this line and specify if you use your own PlantUML server rather than public plantuml.com
+      # - HACKMD_URI=http://    # activate this line and specify HackMD server URI which can be accessed from GROWI client browsers
+      # - HACKMD_URI_FOR_SERVER=http://hackmd:3000  # activate this line and specify HackMD server URI which can be accessed from this server container
+
+    command: &quot;dockerize
+              -wait tcp://mongo:27017
+              -wait tcp://elasticsearch:9200
+              -timeout 60s
+              npm run server:prod&quot;
+    restart: unless-stopped
+    volumes:
+      - growi_data:/data
+
+  mongo:
+    image: mongo:3.4
+    restart: unless-stopped
+    volumes:
+      - mongo_configdb:/data/configdb
+      - mongo_db:/data/db
+
+  elasticsearch:
+    image: elasticsearch:5.3-alpine
+    environment:
+      - &quot;ES_JAVA_OPTS=-Xms256m -Xmx256m&quot;  # increase amount if you have enough memory
+    command:
+      - sh
+      - -c
+      - &quot;./bin/elasticsearch-plugin list | grep -q analysis-kuromoji || ./bin/elasticsearch-plugin install analysis-kuromoji;
+        ./bin/elasticsearch-plugin list | grep -q analysis-icu || ./bin/elasticsearch-plugin install analysis-icu;
+        /docker-entrypoint.sh elasticsearch&quot;
+    restart: unless-stopped
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+      - es_plugins:/usr/share/elasticsearch/plugins
+      - ./esconfig:/usr/share/elasticsearch/config
+
+volumes:
+  growi_data:
+  mongo_configdb:
+  mongo_db:
+  es_data:
+  es_plugins:
+</code></pre>
+
+<h3 id="20190220">20190220</h3>
+
+<h4 id="azure">Azure</h4>
+
+<p><a href="https://azure.microsoft.com/ja-jp/free/free-account-faq/">https://azure.microsoft.com/ja-jp/free/free-account-faq/</a>
+無料サービスまとめ。期間限定もあるので注意。</p>
+
+<blockquote>
+<p>無料の Azure Container Service での仮想マシンのクラスターの作成  いつでも無料</p>
+</blockquote>
+
+<p>これが気になる。</p>
+
+<p>Crowi関連。</p>
+
+<h6 id="azureにwiki-crowi-plus-をインストールしてみる">AzureにWiki「Crowi-Plus」をインストールしてみる</h6>
+
+<p><a href="https://qiita.com/HAGITAKO/items/da98f4a745ce8636a93c">https://qiita.com/HAGITAKO/items/da98f4a745ce8636a93c</a>
+丁寧な説明。無料の範囲かどうかはわからない。</p>
+
+<h6 id="crowi-の-docker-container-を-azure-vm-の-centos-上で構築する">Crowi の Docker Container を Azure VM の CentOS 上で構築する</h6>
+
+<p>Docker使用。Dockerよくわからない。</p>
+
+<h6 id="azureの無料試用期間が終了したので-無料プランへ移行してみた">Azureの無料試用期間が終了したので、無料プランへ移行してみた</h6>
+
+<p><a href="https://qiita.com/hoshimado/items/3b10a2879d4a6212d320">https://qiita.com/hoshimado/items/3b10a2879d4a6212d320</a>
+無料で使う際に役に立つかも。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2019 My New Hugo Site
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="http://example.org/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
