@@ -1,7 +1,0 @@
-baseURL = "http://pages.yakoi.info/hugo/"
-languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "ananke"
-canonifyurls = true
-
-
